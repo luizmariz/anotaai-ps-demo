@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormFacade } from './+state/item.facade';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -9,5 +10,6 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  facade = inject(FormFacade);
   title = 'frontend';
 }

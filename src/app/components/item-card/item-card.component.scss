@@ -7,7 +7,10 @@
   border-radius: var(--border-radius-default);
   box-shadow: 0 0.2rem 0.3rem var(--color-neutral-light);
 
-  transition: transform 350ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 
   .app-item-card {
     &__close-btn {

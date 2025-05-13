@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, input, output } from '@angular/core';
-import { metaByItemType } from '../../config/identity-product.meta';
+import { metaByItemType } from '../../config/item-type.meta';
 import { ItemDto } from '../../dtos/item.dto';
 import { TagComponent } from '../tag/tag.component';
 

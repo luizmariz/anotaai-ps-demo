@@ -1,4 +1,7 @@
-<app-search-input (searched)="itemFacade.search($event)"></app-search-input>
+<app-search-input
+  (searched)="itemFacade.search($event)"
+  (searchChange)="itemFacade.search($event)"
+></app-search-input>
 <ul>
   @for (item of itemFacade.filteredItems(); track item.id) {
     <li>

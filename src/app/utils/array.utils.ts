@@ -11,7 +11,7 @@ export function fuzzySearch<T>(
     threshold,
     includeMatches: false,
     ignoreDiacritics: true,
-    shouldSort: true,
+    shouldSort: false,
   };
 
   const fuse = new Fuse(haystack, fuseOptions);

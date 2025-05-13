@@ -1,2 +1,8 @@
-<input [(ngModel)]="search" />
-<button (click)="searched.emit(search())">Search</button>
+<input
+  [(ngModel)]="search"
+  (keydown.enter)="searched.emit(search())"
+  class="app-search-input__input"
+/>
+<button (click)="searched.emit(search())" class="app-search-input__btn">
+  Search
+</button>

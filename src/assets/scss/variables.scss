@@ -3,12 +3,14 @@
   --color-neutral-light: hsl(0, 0%, 87%);
   --color-neutral-mid: hsl(0, 0%, 50%);
   --color-neutral-darkest: hsl(0, 0%, 0%);
+  --color-primary-lightest: hsla(202, 75%, 63%, 0.4);
+  --color-primary-base: hsl(203.69deg 100% 54.31%);
 
   --color-scrollbar-track: hsl(240, 6%, 93%);
   --color-scrollbar: hsl(0, 0%, 70%);
   --color-background: hsl(0deg 0% 93.73%);
 
-  --font-size-default: 100%/1.75;
+  --font-size-default: 1rem;
   --font-family: 'Roboto', sans-serif;
 
   --width-scrollbar-track: 12px;

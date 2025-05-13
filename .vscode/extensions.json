@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "firsttris.vscode-jest-runner",
+    "ritwickdey.liveserver",
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense",
+    "gruntfuggly.todo-tree",
+    "shardulm94.trailing-spaces",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "angular.ng-template",
+    "redhat.vscode-yaml"
+  ]
+}

@@ -16,7 +16,5 @@ export function fuzzySearch<T>(
 
   const fuse = new Fuse(haystack, fuseOptions);
 
-  console.log(fuse.search(needle));
-
   return needle ? fuse.search(needle).map((item) => item.item) : haystack;
 }

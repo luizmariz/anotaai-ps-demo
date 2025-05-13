@@ -1,22 +1,36 @@
-<button (click)="removed.emit()" class="app-item-card__close-btn">
+<button
+  (click)="removed.emit()"
+  class="app-item-card__close-btn"
+  data-testid="item-card-close-btn"
+>
   <app-icon
     path="/svgs/close.svg"
     class="app-item-card__close-btn-icon"
+    data-testid="item-card-close-icon"
   ></app-icon>
 </button>
-<div class="app-item-card__thumbnail">
+<div class="app-item-card__thumbnail" data-testid="item-card-thumbnail">
   <img
     [src]="item().img"
     alt="Item Thumbnail Image"
     class="app-item-card__thumbnail-img"
+    data-testid="item-card-thumbnail-img"
   />
   <app-tag
     class="app-item-card__thumbnail-tag"
     [label]="metaByItemType[item().type]?.label"
     [bgColor]="metaByItemType[item().type]?.bgColor"
+    data-testid="item-card-tag"
   ></app-tag>
 </div>
-<div class="app-item-card__content">
-  <h3 class="app-item-card__content-title">{{ item().title }}</h3>
-  <p class="app-item-card__content-description">{{ item().description }}</p>
+<div class="app-item-card__content" data-testid="item-card-content">
+  <h3 class="app-item-card__content-title" data-testid="item-card-title">
+    {{ item().title }}
+  </h3>
+  <p
+    class="app-item-card__content-description"
+    data-testid="item-card-description"
+  >
+    {{ item().description }}
+  </p>
 </div>

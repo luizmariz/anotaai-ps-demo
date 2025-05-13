@@ -2,7 +2,8 @@
   [title]="title"
   [subtitle]="subtitle"
   [logoSrc]="logoSrc"
+  data-testid="layout-header"
 ></app-header>
-<main class="app-layout__content-wrapper">
+<main class="app-layout__content-wrapper" data-testid="layout-content-wrapper">
   <ng-content></ng-content>
 </main>

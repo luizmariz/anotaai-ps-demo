@@ -1,21 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Spectator, createComponentFactory } from '@ngneat/spectator/jest';
 import { TagComponent } from './tag.component';
 
 describe('TagComponent', () => {
-  let component: TagComponent;
-  let fixture: ComponentFixture<TagComponent>;
+  let spectator: Spectator<TagComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [TagComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(TagComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  const createComponent = createComponentFactory({
+    component: TagComponent,
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should display the label and apply the background correctly', () => {
+    spectator = createComponent({ props: { label: 'Flor', bgColor: '#ff0' } });
+
+    const tag = spectator.query('[data-testid="tag"]');
+
+    expect(tag).toHaveText('Flor');
+    expect(tag).toHaveStyle({ backgroundColor: 'rgb(255, 255, 0)' });
   });
 });

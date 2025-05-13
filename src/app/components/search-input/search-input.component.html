@@ -2,10 +2,16 @@
   [(ngModel)]="search"
   (keydown.enter)="searched.emit(search())"
   class="app-search-input__input"
+  data-testid="search-input"
 />
-<button (click)="searched.emit(search())" class="app-search-input__btn">
+<button
+  (click)="searched.emit(search())"
+  class="app-search-input__btn"
+  data-testid="search-btn"
+>
   <app-icon
     path="/svgs/search.svg"
     class="app-search-input__btn-icon"
+    data-testid="search-btn-icon"
   ></app-icon>
 </button>

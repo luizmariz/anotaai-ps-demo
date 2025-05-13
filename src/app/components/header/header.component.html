@@ -1,5 +1,14 @@
-<img [src]="logoSrc()" alt="Company logo" class="app-header__logo" />
-<div class="app-header__text-content">
-  <h1 class="app-header__text-content-title">{{ title() }}</h1>
-  <h2 class="app-header__text-content-subtitle">{{ subtitle() }}</h2>
+<img
+  [src]="logoSrc()"
+  alt="Company logo"
+  class="app-header__logo"
+  data-testid="header-logo"
+/>
+<div class="app-header__text-content" data-testid="header-text-content">
+  <h1 class="app-header__text-content-title" data-testid="header-title">
+    {{ title() }}
+  </h1>
+  <h2 class="app-header__text-content-subtitle" data-testid="header-subtitle">
+    {{ subtitle() }}
+  </h2>
 </div>

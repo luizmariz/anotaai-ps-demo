@@ -1,21 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Spectator, createComponentFactory } from '@ngneat/spectator/jest';
+import { MockComponent } from 'ng-mocks';
+import { HeaderComponent } from '../header/header.component';
 import { LayoutComponent } from './layout.component';
 
 describe('LayoutComponent', () => {
-  let component: LayoutComponent;
-  let fixture: ComponentFixture<LayoutComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LayoutComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(LayoutComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  let spectator: Spectator<LayoutComponent>;
+  const createComponent = createComponentFactory({
+    component: LayoutComponent,
+    declarations: [MockComponent(HeaderComponent)],
+    shallow: true,
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should render the header and content wrapper', () => {
+    spectator = createComponent();
+    expect(spectator.query('[data-testid="layout-header"]')).toBeTruthy();
+    expect(
+      spectator.query('[data-testid="layout-content-wrapper"]'),
+    ).toBeTruthy();
   });
 });

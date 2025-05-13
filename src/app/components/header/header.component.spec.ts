@@ -1,21 +1,30 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Spectator, createComponentFactory } from '@ngneat/spectator/jest';
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [HeaderComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(HeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  let spectator: Spectator<HeaderComponent>;
+  const createComponent = createComponentFactory({
+    component: HeaderComponent,
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should display logo, title and subtitle correctly', () => {
+    spectator = createComponent({
+      props: {
+        title: 'Test Title',
+        subtitle: 'Test Subtitle',
+        logoSrc: '/logo.png',
+      },
+    });
+
+    expect(spectator.query('[data-testid="header-logo"]')).toHaveAttribute(
+      'src',
+      '/logo.png',
+    );
+    expect(spectator.query('[data-testid="header-title"]')).toHaveText(
+      'Test Title',
+    );
+    expect(spectator.query('[data-testid="header-subtitle"]')).toHaveText(
+      'Test Subtitle',
+    );
   });
 });

@@ -1,0 +1,8 @@
+<app-search-input></app-search-input>
+<ul>
+  @for (item of itemFacade.allItems(); track item.id) {
+    <li>
+      <app-item-card [item]="item"></app-item-card>
+    </li>
+  }
+</ul>

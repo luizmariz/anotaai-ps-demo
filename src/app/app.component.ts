@@ -1,15 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormFacade } from './+state/item.facade';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @Component({
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, LayoutComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  facade = inject(FormFacade);
-  title = 'frontend';
-}
+export class AppComponent {}

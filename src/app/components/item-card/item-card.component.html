@@ -1,0 +1,12 @@
+<button (click)="removed.emit()">Remove</button>
+<div>
+  <img [src]="item().img" alt="Item Thumbnail Image" />
+  <app-tag
+    [label]="metaByItemType[item().type]?.label"
+    [bgColor]="metaByItemType[item().type]?.bgColor"
+  ></app-tag>
+</div>
+<div>
+  <h3>{{ item().title }}</h3>
+  <p>{{ item().description }}</p>
+</div>

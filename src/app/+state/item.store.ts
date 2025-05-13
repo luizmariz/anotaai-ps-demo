@@ -10,7 +10,7 @@ import { catchError, of } from 'rxjs';
 import { ItemDto } from '../dtos/item.dto';
 import { ItemHttpService } from '../services/item-http.service';
 
-export const FormStore = signalStore(
+export const ItemStore = signalStore(
   { providedIn: 'root' },
   withEntities<ItemDto>(),
   withMethods((store) => ({

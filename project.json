@@ -23,7 +23,20 @@
             "input": "public"
           }
         ],
-        "styles": ["./src/styles.scss"],
+        "styles": [
+          {
+            "input": "./src/assets/scss/fonts.scss",
+            "bundleName": "font-face"
+          },
+          {
+            "input": "./src/assets/scss/variables.scss",
+            "bundleName": "variables"
+          },
+          {
+            "input": "./src/assets/scss/global.scss",
+            "bundleName": "global-styles"
+          }
+        ],
         "scripts": []
       },
       "configurations": {

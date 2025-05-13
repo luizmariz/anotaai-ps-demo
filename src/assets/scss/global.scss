@@ -1,0 +1,23 @@
+:root {
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track);
+  }
+
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-default);
+    background: var(--color-background);
+    color: var(--color-neutral-darkest);
+    overflow: hidden;
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+}

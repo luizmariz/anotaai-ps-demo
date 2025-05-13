@@ -1,20 +1,15 @@
-import Fuse from 'fuse.js';
+import { removeDiacritics } from './string.utils';
 
 export function fuzzySearch<T>(
   needle: string,
   haystack: T[],
   keys: string[],
-  threshold = 0.2,
 ): T[] {
-  const fuseOptions = {
-    keys,
-    threshold,
-    includeMatches: false,
-    ignoreDiacritics: true,
-    shouldSort: false,
-  };
-
-  const fuse = new Fuse(haystack, fuseOptions);
-
-  return needle ? fuse.search(needle).map((item) => item.item) : haystack;
+  return haystack.filter((item) =>
+    keys.some((key: string) =>
+      removeDiacritics((item as { [key: string]: string })[key])
+        .toLowerCase()
+        .includes(removeDiacritics(needle).toLowerCase()),
+    ),
+  );
 }

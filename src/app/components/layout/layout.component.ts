@@ -11,5 +11,5 @@ import { HeaderComponent } from '../header/header.component';
 export class LayoutComponent {
   public readonly title = 'Teste de Desenvolvedor Front-End - Anota AI';
   public readonly subtitle = 'Luiz Mariz';
-  public readonly logoSrc = '/images/logo-128x128.png';
+  public readonly logoSrc = 'images/logo-128x128.png';
 }

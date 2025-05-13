@@ -2,13 +2,11 @@
   (searched)="itemFacade.search($event)"
   (searchChange)="itemFacade.search($event)"
 ></app-search-input>
-<ul>
+<ul class="app-item-list__list">
   @for (item of itemFacade.filteredItems(); track item.id) {
-    <li>
-      <app-item-card
-        [item]="item"
-        (removed)="itemFacade.removeItem(item.id)"
-      ></app-item-card>
-    </li>
+    <app-item-card
+      [item]="item"
+      (removed)="itemFacade.removeItem(item.id)"
+    ></app-item-card>
   }
 </ul>

@@ -5,13 +5,16 @@
   --color-neutral-darkest: hsl(0, 0%, 0%);
   --color-primary-lightest: hsla(202, 75%, 63%, 0.4);
   --color-primary-base: hsl(203.69deg 100% 54.31%);
+  --color-feedback-danger: hsla(0, 100%, 52%, 0.8);
 
   --color-scrollbar-track: hsl(240, 6%, 93%);
   --color-scrollbar: hsl(0, 0%, 70%);
   --color-background: hsl(0deg 0% 93.73%);
 
-  --font-size-default: 1rem;
+  --font-size-default: 16px;
   --font-family: 'Roboto', sans-serif;
+
+  --border-radius-default: 0.3rem;
 
   --width-scrollbar-track: 12px;
 }

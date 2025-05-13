@@ -4,5 +4,8 @@
   class="app-search-input__input"
 />
 <button (click)="searched.emit(search())" class="app-search-input__btn">
-  Search
+  <app-icon
+    path="/svgs/search.svg"
+    class="app-search-input__btn-icon"
+  ></app-icon>
 </button>

@@ -5,7 +5,7 @@
   padding: 0 0.35rem;
   height: 3.7rem;
   background-color: var(--color-neutral-lightest);
-  box-shadow: 0 0.2rem 0.3rem #dedede;
+  box-shadow: 0 0.2rem 0.3rem var(--color-neutral-light);
 
   .app-header {
     &__logo {

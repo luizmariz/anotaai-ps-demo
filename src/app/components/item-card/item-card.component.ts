@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, input, output } from '@angular/core';
 import { metaByItemType } from '../../config/item-type.meta';
 import { ItemDto } from '../../dtos/item.dto';
+import { IconComponent } from '../icon/icon.component';
 import { TagComponent } from '../tag/tag.component';
 
 @Component({
   selector: 'app-item-card',
-  imports: [CommonModule, TagComponent],
+  imports: [CommonModule, TagComponent, IconComponent],
   templateUrl: './item-card.component.html',
   styleUrl: './item-card.component.scss',
 })

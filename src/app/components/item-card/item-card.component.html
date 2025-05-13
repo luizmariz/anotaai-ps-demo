@@ -1,12 +1,22 @@
-<button (click)="removed.emit()">Remove</button>
-<div>
-  <img [src]="item().img" alt="Item Thumbnail Image" />
+<button (click)="removed.emit()" class="app-item-card__close-btn">
+  <app-icon
+    path="/svgs/close.svg"
+    class="app-item-card__close-btn-icon"
+  ></app-icon>
+</button>
+<div class="app-item-card__thumbnail">
+  <img
+    [src]="item().img"
+    alt="Item Thumbnail Image"
+    class="app-item-card__thumbnail-img"
+  />
   <app-tag
+    class="app-item-card__thumbnail-tag"
     [label]="metaByItemType[item().type]?.label"
     [bgColor]="metaByItemType[item().type]?.bgColor"
   ></app-tag>
 </div>
-<div>
-  <h3>{{ item().title }}</h3>
-  <p>{{ item().description }}</p>
+<div class="app-item-card__content">
+  <h3 class="app-item-card__content-title">{{ item().title }}</h3>
+  <p class="app-item-card__content-description">{{ item().description }}</p>
 </div>

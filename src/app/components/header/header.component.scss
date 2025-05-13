@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  background-color: var(--color-neutral-lightest);
+  box-shadow: 0 0.3rem 0.3rem #dedede;
+
+  .app-header {
+    &__logo {
+      height: 4.5rem;
+    }
+
+    &__text-content {
+      display: inline-flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      &-title {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      &-subtitle {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding-left: 0.3rem;
+
+        color: var(--color-neutral-mid);
+
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-style: italic;
+
+        &::before,
+        &::after {
+          content: '';
+          display: inline-block;
+          height: 0.085rem;
+          margin-top: 0.085rem;
+          background-color: var(--color-neutral-mid);
+        }
+
+        &::before {
+          width: 0.8rem;
+        }
+
+        &::after {
+          width: 3.8rem;
+        }
+      }
+    }
+  }
+}

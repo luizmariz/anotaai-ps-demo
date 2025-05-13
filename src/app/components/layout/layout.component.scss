@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  overflow-y: scroll;
+  display: block;
+  height: 100vh;
+
+  .app-layout {
+    &__content-wrapper {
+      max-width: 1700px;
+      margin: 0 auto;
+    }
+  }
+}
